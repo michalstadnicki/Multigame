@@ -39,9 +39,9 @@ public class Menu {
 //                    Paper, rock, scissors
                     Load load2 = new Load();
                     load2.loading();
-//                    GameTest test = new GameTest();
-//                    test.gameTest();
-                    System.out.println("game 2");
+                    PaperRockScissors paper = new PaperRockScissors();
+                    paper.paper();
+//                    System.out.println("game 2");
                     break;
 
                 case 3:

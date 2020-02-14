@@ -3,7 +3,9 @@ import java.util.Scanner;
 
 public class PaperRockScissors {
 
-    public static void main(String[ ] args) {
+//    public static void main(String[ ] args) {
+
+    public void paper() {
         
         System.out.println("Paper Rock Scissors Game");
         
@@ -62,7 +64,7 @@ public class PaperRockScissors {
              else {
                  System.out.println("You LOSE");
             }
-//            return;
+            return;
         }
     }
 

@@ -62,7 +62,7 @@ public class PaperRockScissors {
              else {
                  System.out.println("You LOSE");
             }
-            return;
+//            return;
         }
     }
 

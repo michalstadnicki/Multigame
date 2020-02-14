@@ -5,18 +5,23 @@ public class FourNumbers {
 
 //    public static void main(String[] args) {
 
-    public void numbers() {
+    public void numbers() throws InterruptedException {
 
         System.out.println("How many attempts do you want to guess the 4-digit number?");
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Please enter your attemps: ");
+        System.out.print("Please enter your attemps (1-20): ");
         int attemps = scanner.nextInt();
 
         if (attemps < 1) {
             System.out.println("Wrong number attemps must be greater than 0");
-        } else {
+        }
+        else if (attemps > 20) {
+            System.out.println("Wrong number attemps must be lower than 20");
+        }
+
+        else {
             System.out.println("Computer generated 4 digits number (digits don't repeat).\n"
                     + "You can try to guess the 4 digits number in " + attemps + " attempts.\n");
             System.out.println("***************************************\n");
@@ -53,6 +58,20 @@ public class FourNumbers {
                         System.out.print("Sorry, you failed. The number is: ");
                         for (int i = 0; i < random.length; i++) {
                             System.out.print(random[i]);
+
+                            System.out.print("Do you want play again 1 = YES, 2 = NO ");
+                            Scanner scanner2 = new Scanner(System.in);
+                            int answer = scanner2.nextInt();
+                            if (answer == 1 ) {
+                                FourNumbers numbers = new FourNumbers();
+                                numbers.numbers();
+                            }
+                            else {
+                                System.out.println("Thanks for playing this game !!!");
+                                Menu menu = new Menu();
+                                menu.menu();
+                            }
+
                         }
                     }
                 }

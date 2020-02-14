@@ -2,11 +2,6 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
     public void menu() throws InterruptedException {
 
         System.out.println("***************************************");
@@ -33,7 +28,6 @@ public class Menu {
             switch (operationNumber) {
                 case 1:
 //                    4 numbers
-                    clearScreen();
                     Load load1 = new Load();
                     load1.loading();
                     FourNumbers numbers = new FourNumbers();
@@ -79,6 +73,8 @@ public class Menu {
                 default:
                     System.out.println("Invalid number");
 //                    return menu();
+                    Menu menu = new Menu();
+                    menu.menu();
             }
         }
         while (!exit);

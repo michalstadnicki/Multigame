@@ -5,16 +5,21 @@ public class Menu {
     public void menu() throws InterruptedException {
 
         System.out.println("***************************************");
-        System.out.println("*\t\t Game list:");
+        System.out.println("**\t\t\t GAME LIST \t\t\t\t **");
         System.out.println("***************************************");
-        System.out.println("*\r [1] 4 numbers game");
-        System.out.println("*\r [2] Paper, rock, scissors game");
-        System.out.println("*\r [3] Dice game");
-        System.out.println("*\r [4] Tic Tac Toe game");
-        System.out.println("*\r [5] Black Jack game ");
+        System.out.println("**\t [1] 4 numbers game \t\t\t **");
+        System.out.println("**\t [2] Paper, rock, scissors game  **");
+        System.out.println("**\t [3] Dice game  \t\t\t\t **");
+        System.out.println("**\t [4] Tic Tac Toe game   \t\t **");
+        System.out.println("**\t [5] Black Jack game    \t\t **");
         System.out.println("***************************************");
+        System.out.format("%-5s%-4s%-28s%-1s","**",  "[6]", "EXIT", "**");
+//        System.out.println("**\t [6] EXIT   \t\t\t\t\t **");
+        System.out.println();
         System.out.println("***************************************");
-        System.out.println("ENTER CHOICE other number to exit:  ");
+        System.out.print("ENTER CHOICE: ");
+
+
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -53,9 +58,13 @@ public class Menu {
                     System.out.println("game 5");
                     break;
 
-                default:
+                case 6:
                     System.out.println("Thanks for playing");
                     exit = true;
+                    break;
+
+                default:
+                    System.out.println("Invalid number");
             }
         }
         while (!exit);

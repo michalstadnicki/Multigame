@@ -19,8 +19,6 @@ public class Menu {
         System.out.println("***************************************");
         System.out.print("ENTER CHOICE: ");
 
-
-
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -29,15 +27,19 @@ public class Menu {
             byte operationNumber = scanner.nextByte();
             switch (operationNumber) {
                 case 1:
+//                    4 numbers
                     Load load1 = new Load();
                     load1.loading();
-                    System.out.println("game 1");
+                    FourNumbers numbers = new FourNumbers();
+                    numbers.numbers();
+//                    System.out.println("game 1");
                     break;
 
                 case 2:
                     Load load2 = new Load();
                     load2.loading();
-                    System.out.println("game 2");
+                            GameTest test = new GameTest();
+                            test.gameTest();
                     break;
 
                 case 3:
@@ -65,6 +67,7 @@ public class Menu {
 
                 default:
                     System.out.println("Invalid number");
+//                    return operationNumber();
             }
         }
         while (!exit);

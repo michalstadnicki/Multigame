@@ -1,7 +1,7 @@
 /*
 Multi-game is a simple console application in JAVA.
 *
-* Individual project, author Michał Stadnicki
+* Individual project
 
 * */
 

@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class Menu {
 
+    public void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
     public void menu() throws InterruptedException {
 
         System.out.println("***************************************");
@@ -28,6 +33,7 @@ public class Menu {
             switch (operationNumber) {
                 case 1:
 //                    4 numbers
+                    clearScreen();
                     Load load1 = new Load();
                     load1.loading();
                     FourNumbers numbers = new FourNumbers();
@@ -36,13 +42,16 @@ public class Menu {
                     break;
 
                 case 2:
+//                    Paper, rock, scissors
                     Load load2 = new Load();
                     load2.loading();
-                            GameTest test = new GameTest();
-                            test.gameTest();
+//                    GameTest test = new GameTest();
+//                    test.gameTest();
+                    System.out.println("game 2");
                     break;
 
                 case 3:
+//                    Dice
                     Load load3 = new Load();
                     load3.loading();
                     System.out.println("game 3");
@@ -50,11 +59,13 @@ public class Menu {
 
                 case 4:
                     Load load4 = new Load();
+//                    Tic Tac Toe
                     load4.loading();
                     System.out.println("game 4");
                     break;
 
                 case 5:
+//                    Black Jack
                     Load load5 = new Load();
                     load5.loading();
                     System.out.println("game 5");
@@ -67,7 +78,7 @@ public class Menu {
 
                 default:
                     System.out.println("Invalid number");
-//                    return operationNumber();
+//                    return menu();
             }
         }
         while (!exit);

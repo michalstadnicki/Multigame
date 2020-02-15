@@ -5,6 +5,8 @@ public class Menu {
     public void menu() throws InterruptedException {
 
         System.out.println("***************************************");
+        System.out.println("**\t\t\t MULTIGAME PROJECT \t\t **");
+        System.out.println("***************************************");
         System.out.println("**\t\t\t GAME LIST \t\t\t\t **");
         System.out.println("***************************************");
         System.out.println("**\t [1] 4 numbers game \t\t\t **");
@@ -71,7 +73,7 @@ public class Menu {
                     break;
 
                 default:
-                    System.out.println("Invalid number");
+                    System.out.println("Invalid number. You must enter between 1-6 only");
 //                    return menu();
                     Menu menu = new Menu();
                     menu.menu();

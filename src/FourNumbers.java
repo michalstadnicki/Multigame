@@ -7,6 +7,10 @@ public class FourNumbers {
 
     public void numbers() throws InterruptedException {
 
+        System.out.println("***************************************");
+        System.out.println("**\t\t\t 4 NUMBERS GAME \t\t **");
+        System.out.println("***************************************\n");
+
         System.out.println("How many attempts do you want to guess the 4-digit number?");
 
         Scanner scanner = new Scanner(System.in);
@@ -24,11 +28,9 @@ public class FourNumbers {
             numbers.numbers();
         } else {
             System.out.println("");
+
             System.out.println("Computer generated 4 digits number (digits don't repeat).\n"
                     + "You can try to guess the 4 digits number in " + attemps + " attempts.\n");
-            System.out.println("***************************************");
-            System.out.println("**\t\t\t 4 NUMBERS GAME \t\t **");
-            System.out.println("***************************************");
 
             int[] random = numberGenerator();
 //        int attemps = 15;

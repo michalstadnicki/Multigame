@@ -6,8 +6,10 @@ public class PaperRockScissors {
 //    public static void main(String[ ] args) {
 
     public void paper() {
-        
-        System.out.println("Paper Rock Scissors Game");
+
+        System.out.println("***************************************");
+        System.out.println("**\t ROCK PAPER SCISSORS GAME \t\t **");
+        System.out.println("***************************************\n");
         
         Scanner scaner = new Scanner(System.in);
         

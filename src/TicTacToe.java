@@ -7,6 +7,10 @@ public class TicTacToe {
 
     public static void main(String[] args) {
 
+        System.out.println("***************************************");
+        System.out.println("**\t\t\t TIC TAC TOE GAME \t\t **");
+        System.out.println("***************************************\n");
+
         char[][] gameBoard = {  {' ', '|', ' ', '|', ' '},
                                 {'-', '+', '-', '+', '-'},
                                 {' ', '|', ' ', '|', ' '},

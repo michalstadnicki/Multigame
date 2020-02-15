@@ -5,7 +5,9 @@ public class TicTacToe {
     static ArrayList<Integer> userPosition = new ArrayList<Integer>();
     static ArrayList<Integer> computerPosition = new ArrayList<Integer>();
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+
+    public void tic() {
 
         System.out.println("***************************************");
         System.out.println("**\t\t\t TIC TAC TOE GAME \t\t **");

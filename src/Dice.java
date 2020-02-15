@@ -2,37 +2,10 @@ import java.util.Random;
 
 public class Dice {
 
-        public static void six(){
-            System.out.print("---------\n| *   * |\n| *   * |\n| *   * |\n---------");
-        }
+//        public static void main(String[] args) {
 
-        public static void five(){
-            System.out.print("---------\n| *   * |\n|   *   |\n| *   * |\n---------");
-        }
+    public void dice() {
 
-        public static void four(){
-            System.out.print("---------\n| *   * |\n|       |\n| *   * |\n---------");
-        }
-
-        public static void three(){
-            System.out.print("---------\n|     * |\n|   *   |\n| *     |\n---------");
-        }
-
-        public static void two(){
-            System.out.print("---------\n|     * |\n|       |\n| *     |\n---------");
-        }
-
-        public static void one(){
-            System.out.print("---------\n|       |\n|   *   |\n|       |\n---------");
-        }
-
-
-        public static int random(){
-            Random random = new Random();
-            int a = random.nextInt(6)+1;
-            return a;
-        }
-        public static void main(String[] args) {
             int user = random();
             int computer = random();
 
@@ -65,4 +38,35 @@ public class Dice {
                 System.out.println("It's a DRAW");
             }
         }
+
+    public static void six(){
+        System.out.println("---------\n| *   * |\n| *   * |\n| *   * |\n---------");
+    }
+
+    public static void five(){
+        System.out.println("---------\n| *   * |\n|   *   |\n| *   * |\n---------");
+    }
+
+    public static void four(){
+        System.out.println("---------\n| *   * |\n|       |\n| *   * |\n---------");
+    }
+
+    public static void three(){
+        System.out.println("---------\n|     * |\n|   *   |\n| *     |\n---------");
+    }
+
+    public static void two(){
+        System.out.println("---------\n|     * |\n|       |\n| *     |\n---------");
+    }
+
+    public static void one(){
+        System.out.println("---------\n|       |\n|   *   |\n|       |\n---------");
+    }
+
+
+    public static int random(){
+        Random random = new Random();
+        int a = random.nextInt(6)+1;
+        return a;
+    }
     }

@@ -34,7 +34,7 @@ public class Menu {
                     load1.loading();
                     FourNumbers numbers = new FourNumbers();
                     numbers.numbers();
-//                    System.out.println("game 1");
+//                    System.out.println("4 numbers");
                     break;
 
                 case 2:
@@ -43,28 +43,34 @@ public class Menu {
                     load2.loading();
                     PaperRockScissors paper = new PaperRockScissors();
                     paper.paper();
-//                    System.out.println("game 2");
+//                    System.out.println("Paper, rock, scissors");
                     break;
 
                 case 3:
 //                    Dice
                     Load load3 = new Load();
                     load3.loading();
-                    System.out.println("game 3");
+                    Dice dice = new Dice();
+                    dice.dice();
+//                    System.out.println("Dice");
                     break;
 
                 case 4:
-                    Load load4 = new Load();
 //                    Tic Tac Toe
+                    Load load4 = new Load();
                     load4.loading();
-                    System.out.println("game 4");
+                    TicTacToe tic = new TicTacToe();
+                    tic.tic();
+//                    System.out.println("Tic Tac Toe");
                     break;
 
                 case 5:
 //                    Black Jack
                     Load load5 = new Load();
                     load5.loading();
-                    System.out.println("game 5");
+                    BlackJack black = new BlackJack();
+                    black.black();
+//                    System.out.println("Black Jack");
                     break;
 
                 case 6:

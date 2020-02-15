@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class BlackJack {
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+
+    public void black() {
+
         Scanner scanner = new Scanner(System.in);
         while (true) {
             startGame();

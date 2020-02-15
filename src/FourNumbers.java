@@ -11,6 +11,23 @@ public class FourNumbers {
         System.out.println("**\t\t\t 4 NUMBERS GAME \t\t **");
         System.out.println("***************************************\n");
 
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            startGame();
+            System.out.println("");
+            System.out.print("Do you want to play again? (Y/N):  ");
+            String decision = scanner.nextLine().toUpperCase();
+            if (decision.equals("Y")) {
+                continue;
+            } else {
+                Menu menu = new Menu();
+                menu.menu();
+            }
+        }
+    }
+
+    private static void startGame() throws InterruptedException {
+
         System.out.println("How many attempts do you want to guess the 4-digit number?");
 
         Scanner scanner = new Scanner(System.in);
@@ -18,12 +35,8 @@ public class FourNumbers {
         System.out.print("Please enter your attemps (1-20): ");
         int attemps = scanner.nextInt();
 
-        if (attemps < 1) {
-            System.out.println("Wrong number attemps must be greater than 0");
-            FourNumbers numbers = new FourNumbers();
-            numbers.numbers();
-        } else if (attemps > 20) {
-            System.out.println("Wrong number attemps must be lower than 20");
+        if (attemps < 1 || attemps > 20) {
+            System.out.println("Wrong number attemps must be greater than 0 and lower than 20");
             FourNumbers numbers = new FourNumbers();
             numbers.numbers();
         } else {
@@ -48,7 +61,7 @@ public class FourNumbers {
                     }
                 }
                 if (indexMatch == 4) {
-                    System.out.print("Well done! Your number is Correct! The number is: ");
+                    System.out.println("Well done! Your number is Correct! The number is: ");
                     for (int i = 0; i < guess.length; i++) {
                         System.out.print(guess[i]);
                     }

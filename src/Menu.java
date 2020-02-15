@@ -5,8 +5,6 @@ public class Menu {
     public void menu() throws InterruptedException {
 
         System.out.println("***************************************");
-        System.out.println("**\t\t\t MULTIGAME PROJECT \t\t **");
-        System.out.println("***************************************");
         System.out.println("**\t\t\t GAME LIST \t\t\t\t **");
         System.out.println("***************************************");
         System.out.println("**\t [1] 4 numbers game \t\t\t **");
@@ -15,11 +13,11 @@ public class Menu {
         System.out.println("**\t [4] Tic Tac Toe game   \t\t **");
         System.out.println("**\t [5] Black Jack game    \t\t **");
         System.out.println("***************************************");
-        System.out.format("%-5s%-4s%-28s%-1s","**",  "[6]", "EXIT", "**");
+        System.out.format("%-5s%-4s%-28s%-1s", "**", "[6]", "EXIT", "**");
 //        System.out.println("**\t [6] EXIT   \t\t\t\t\t **");
         System.out.println();
         System.out.println("***************************************");
-        System.out.print("ENTER CHOICE: ");
+        System.out.print("ENTER CHOICE:  ");
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;

@@ -10,6 +10,9 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
+        System.out.println("***************************************");
+        System.out.println("**\t\t\t MULTIGAME PROJECT \t\t **");
+
         Menu menu = new Menu();
         menu.menu();
 

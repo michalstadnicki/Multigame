@@ -7,11 +7,27 @@ public class TicTacToe {
 
 //    public static void main(String[] args) {
 
-    public void tic() {
+    public void tic() throws InterruptedException {
 
         System.out.println("***************************************");
         System.out.println("**\t\t\t TIC TAC TOE GAME \t\t **");
         System.out.println("***************************************\n");
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            startGame();
+            System.out.print("Do you want to play again? (Y/N):  ");
+            String decision = scanner.nextLine().toUpperCase();
+            if (decision.equals("Y")) {
+                continue;
+            } else {
+                Menu menu = new Menu();
+                menu.menu();
+            }
+        }
+    }
+
+    private static void startGame() {
 
         char[][] gameBoard = {  {' ', '|', ' ', '|', ' '},
                                 {'-', '+', '-', '+', '-'},
@@ -22,11 +38,11 @@ public class TicTacToe {
 
         printGameBoard(gameBoard);
 
-        while(true) {
+        while (true) {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Enter Your position (1-9):  ");
             int userPos = scanner.nextInt();
-            while(userPosition.contains(userPos) || computerPosition.contains(userPos)) {
+            while (userPosition.contains(userPos) || computerPosition.contains(userPos)) {
                 System.out.println("Position taken, enter correct position");
                 userPos = scanner.nextInt();
             }
@@ -34,7 +50,7 @@ public class TicTacToe {
             placePiece(gameBoard, userPos, "user");
 
             String result = chceckWinner();
-            if(result.length() > 0) {
+            if (result.length() > 0) {
                 System.out.println(result);
                 break;
             }
@@ -42,7 +58,7 @@ public class TicTacToe {
             Random random = new Random();
             int computerPosistion = random.nextInt(9) + 1;
 
-            while(userPosition.contains(computerPosistion) || computerPosition.contains(computerPosistion)) {
+            while (userPosition.contains(computerPosistion) || computerPosition.contains(computerPosistion)) {
                 computerPosistion = random.nextInt(9) + 1;
 
             }
@@ -52,11 +68,10 @@ public class TicTacToe {
             printGameBoard(gameBoard);
 
             result = chceckWinner();
-            if(result.length() > 0) {
+            if (result.length() > 0) {
                 System.out.println(result);
                 break;
             }
-
         }
 
     }
@@ -75,11 +90,10 @@ public class TicTacToe {
 
         char symbol = ' ';
 
-        if(user.equals("user")) {
+        if (user.equals("user")) {
             symbol = 'X';
             userPosition.add(position);
-        }
-        else if (user.equals("computer")) {
+        } else if (user.equals("computer")) {
             symbol = 'O';
             computerPosition.add(position);
         }
@@ -118,16 +132,16 @@ public class TicTacToe {
 
     }
 
-    public static String chceckWinner () {
+    public static String chceckWinner() {
 
-        List topRow = Arrays.asList(1,2,3);
-        List middleRow = Arrays.asList(4,5,6);
-        List bottomRow = Arrays.asList(7,8,9);
-        List leftCollumn = Arrays.asList(1,4,7);
-        List middleCollumn = Arrays.asList(2,5,8);
-        List rightCollumn = Arrays.asList(3,6,9);
-        List cross1 = Arrays.asList(1,5,9);
-        List cross2 = Arrays.asList(3,5,7);
+        List topRow = Arrays.asList(1, 2, 3);
+        List middleRow = Arrays.asList(4, 5, 6);
+        List bottomRow = Arrays.asList(7, 8, 9);
+        List leftCollumn = Arrays.asList(1, 4, 7);
+        List middleCollumn = Arrays.asList(2, 5, 8);
+        List rightCollumn = Arrays.asList(3, 6, 9);
+        List cross1 = Arrays.asList(1, 5, 9);
+        List cross2 = Arrays.asList(3, 5, 7);
 
         List<List> winning = new ArrayList<List>();
         winning.add(topRow);
@@ -139,21 +153,16 @@ public class TicTacToe {
         winning.add(cross1);
         winning.add(cross2);
 
-        for(List l : winning) {
+        for (List l : winning) {
             if (userPosition.containsAll(l)) {
                 return "YOU WIN";
-            }
-            else if (computerPosition.contains(l))
-            {
+            } else if (computerPosition.contains(l)) {
                 return "You LOSE";
-            }
-
-            else if (userPosition.size() + computerPosition.size() == 9) {
+            } else if (userPosition.size() + computerPosition.size() == 9) {
 
                 return "It's a DRAW";
             }
         }
-
         return "";
     }
 }

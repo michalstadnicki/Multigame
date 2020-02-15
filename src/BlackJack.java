@@ -7,7 +7,12 @@ public class BlackJack {
 
 //    public static void main(String[] args) {
 
-    public void black() {
+    public void black() throws InterruptedException {
+
+        System.out.println("***************************************");
+        System.out.println("**\t\t\t BLACK JACK GAME \t\t **");
+        System.out.println("***************************************\n");
+
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -17,7 +22,8 @@ public class BlackJack {
             if (decision.equals("Y")) {
                 continue;
             } else {
-                break;
+                Menu menu = new Menu();
+                menu.menu();
             }
         }
     }

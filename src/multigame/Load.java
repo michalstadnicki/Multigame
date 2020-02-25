@@ -1,3 +1,5 @@
+package multigame;
+
 public class Load {
 
     public void loading() throws InterruptedException {

@@ -1,3 +1,6 @@
+package multigame.games;
+
+import multigame.*;
 import java.util.*;
 
 public class TicTacToe {

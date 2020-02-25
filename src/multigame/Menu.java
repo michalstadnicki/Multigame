@@ -1,3 +1,7 @@
+package multigame;
+
+import multigame.games.*;
+
 import java.util.Scanner;
 
 public class Menu {

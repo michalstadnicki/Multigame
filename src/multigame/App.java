@@ -1,4 +1,4 @@
-/*
+package multigame;/*
 Multi-game is a simple console application in JAVA.
 *
 * Individual project

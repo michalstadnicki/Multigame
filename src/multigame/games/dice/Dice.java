@@ -1,4 +1,4 @@
-package multigame.games;
+package multigame.games.dice;
 
 import multigame.*;
 import java.util.Random;

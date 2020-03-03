@@ -1,4 +1,4 @@
-package multigame.games;
+package multigame.games.tictactoe;
 
 import multigame.*;
 import java.util.*;

@@ -1,6 +1,10 @@
 package multigame;
 
-import multigame.games.*;
+import multigame.games.blackjack.BlackJack;
+import multigame.games.dice.Dice;
+import multigame.games.fournumbers.FourNumbers;
+import multigame.games.paperrockscissors.PaperRockScissors;
+import multigame.games.tictactoe.TicTacToe;
 
 import java.util.Scanner;
 

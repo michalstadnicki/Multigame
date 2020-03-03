@@ -1,4 +1,4 @@
-package multigame.games;
+package multigame.games.blackjack;
 
 import multigame.*;
 import java.util.ArrayList;

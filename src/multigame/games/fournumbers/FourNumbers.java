@@ -1,4 +1,4 @@
-package multigame.games;
+package multigame.games.fournumbers;
 
 import multigame.*;
 import java.util.Random;

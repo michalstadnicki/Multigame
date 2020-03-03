@@ -1,4 +1,4 @@
-package multigame.games;
+package multigame.games.paperrockscissors;
 
 import multigame.*;
 import java.util.Random;
